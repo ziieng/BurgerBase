@@ -1,0 +1,24 @@
+{
+  "name": "burgerbase",
+  "version": "1.0.0",
+  "description": "A burger-logging demonstration of MySQL, Node, Express, Handlebars and ORM utilization.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziieng/BurgerBase.git"
+  },
+  "author": "Christina Engelhardt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ziieng/BurgerBase/issues"
+  },
+  "homepage": "https://github.com/ziieng/BurgerBase#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}
