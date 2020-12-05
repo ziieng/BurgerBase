@@ -4,3 +4,5 @@ const orm = require("../config/orm");
 // orm.insertOne()
 // orm.selectAll()
 // orm.updateOne()
+
+// module.exports = calls

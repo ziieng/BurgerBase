@@ -7,5 +7,6 @@ CREATE TABLE burgers(
   id INT NOT NULL AUTO_INCREMENT,
   burger_name VARCHAR(30) NOT NULL,
   devoured BOOLEAN DEFAULT false,
+  icon VACHAR(20),
   PRIMARY KEY (id)
 );
