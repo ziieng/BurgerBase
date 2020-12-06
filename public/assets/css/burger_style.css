@@ -7,3 +7,10 @@ body {
   background-image: url("../img/bg.png");
   background-repeat: repeat;
 }
+
+.text-block {
+  background-color: #fee990;
+  opacity: 80%;
+  position: absolute;
+  left: 20px
+}
