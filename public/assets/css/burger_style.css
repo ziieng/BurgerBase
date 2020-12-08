@@ -1,6 +1,7 @@
 /* brown: 7b441b
 lt yellow: fee990
-green: 618815 */
+green: 618815 
+cream: f7f4eb*/
 
 
 body {
@@ -13,4 +14,8 @@ body {
   opacity: 80%;
   position: absolute;
   left: 20px
+}
+
+.list-group-item {
+  background-color: #f7f4eb;
 }

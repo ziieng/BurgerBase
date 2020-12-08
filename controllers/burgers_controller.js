@@ -4,17 +4,17 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  burger.all((res) => {
+  burger.all((result) => {
     let devoured = [];
     let undevoured = [];
-    for (line of res) {
+    for (line of result) {
       if (line.devoured == true) {
         devoured.push(line);
       } else {
         undevoured.push(line);
       }
     }
-    res.render("index", undevoured, devoured);
+    res.render("index", {  undevoured:  undevoured,  devoured: devoured  });
   });
 });
 
@@ -22,10 +22,10 @@ router.put("/api/devour/:id", (req, res) => {
   burger.devour(req.params.id, (result) => {
     if (result.affectedRows == 0) {
       //id doesn't exist
-      return res.status(404).end();
+      res.status(404).end();
     } else {
       //report success
-      return res.status(200).end();
+      res.status(200).end();
     }
   });
 });
@@ -44,8 +44,13 @@ router.post("/api/burger", (req, res) => {
     newBurg.icon = "burger" + Math.floor(Math.random() * 6);
   }
   burger.insert(newBurg, (result) => {
-    //report success
-    res.status(200).end();
+    if (result.affectedRows == 0) {
+      //something went wrong
+      res.status(500).end();
+    } else {
+      //report success
+      res.status(200).end();
+    }
   });
 });
 
