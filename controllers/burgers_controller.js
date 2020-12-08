@@ -31,26 +31,9 @@ router.put("/api/devour/:id", (req, res) => {
 });
 
 router.post("/api/burger", (req, res) => {
-  let newBurg = { burger_name: req.body.burger_name, icon: "" };
-  //pick random burger icon, with options for chicken and fish
-  if (newBurg.burger_name.contains("chicken")) {
-    newBurg.icon = "chicken" + Math.round(Math.random());
-  } else if (
-    newBurg.burger_name.contains("fish") ||
-    newBurg.burger_name.contains("salmon")
-  ) {
-    newBurg.icon = "fish0";
-  } else {
-    newBurg.icon = "burger" + Math.floor(Math.random() * 6);
-  }
+  let newBurg = { burger_name: req.body.burger_name, icon: req.body.icon };
   burger.insert(newBurg, (result) => {
-    if (result.affectedRows == 0) {
-      //something went wrong
-      res.status(500).end();
-    } else {
-      //report success
-      res.status(200).end();
-    }
+    res.status(200).end();
   });
 });
 
