@@ -13,9 +13,9 @@ var burger = {
   },
 
   //update devoured status
-  devour: function  (id, cb) {
-    orm.updateOne("burgers",  "devoured",  "true",  id, (res)  =>  cb(res));;
-  },,
+  devour: function (id, cb) {
+    orm.updateOne("burgers", "devoured", "true", id, (res) => cb(res));
+  },
 };
 
 module.exports = burger;

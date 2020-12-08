@@ -1,9 +1,9 @@
 const connection = require("./connection");
 
 const orm = {
-  selectAll(table, filtercol, filtercond, cb) {
+  selectAll(table, cb) {
     connection.query(
-      `SELECT * FROM ${table} WHERE ${filtercol} = ${filtercond}`,
+      `SELECT * FROM ${table}`,
       (err,   res) => {
             if (err) console.log(err);
             cb(res);
