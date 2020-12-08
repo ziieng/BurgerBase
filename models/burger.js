@@ -2,9 +2,9 @@ const orm = require("../config/orm");
 
 var burger = {
   //calls to orm functions
-  //list all devoured or undevoured
-  all: function (status, cb) {
-    orm.selectAll("burgers", "devoured", status, (res) => cb(res));
+  //list all
+  all: function (cb) {
+    orm.selectAll("burgers", (res) => cb(res));
   },
 
   //insert new
