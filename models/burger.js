@@ -9,9 +9,12 @@ var burger = {
 
   //insert new
   insert: function (data, cb) {
-    orm.insertOne("burgers", "burger_name, icon", data, (response) =>
-      cb(response)
-    );
+    console.log(data);
+    let cols = Object.keys(data).toString();
+    let vals = Object.values(data);
+    console.log(cols);
+    console.log(vals);
+    orm.insertOne("burgers", cols, vals, (response) => cb(response));
   },
 
   //update devoured status

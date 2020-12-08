@@ -13,12 +13,12 @@ const orm = {
 
   insertOne(intable, conds, values, cb) {
     connection.query(
-      `INSERT INTO ${intable} (${conds}) VALUES ?`,
+      `INSERT INTO ${intable} (${conds}) VALUES (?,?)`,
       values,
-      (err,   res) => {
-            if (err) console.log(err);
-            cb(res);
-          }
+      (err, res) => {
+        if (err) console.log(err);
+        cb(res);
+      }
     );
   },
 
