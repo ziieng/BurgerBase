@@ -1,21 +1,26 @@
-/* brown: 7b441b
-lt yellow: fee990
-green: 618815 
-cream: f7f4eb*/
-
-
 body {
   background-image: url("../img/bg.png");
   background-repeat: repeat;
 }
 
+/* brown: 7b441b
+lt yellow: fee990
+green: 618815 
+cream: f7f4eb*/
+
 .text-block {
   background-color: #fee990;
   opacity: 80%;
   position: absolute;
-  left: 20px
+  top: 20px;
+  left: 20px;
 }
 
 .list-group-item {
   background-color: #f7f4eb;
+}
+
+.icon-img {
+  height: 111px;
+  width: 169px;
 }
