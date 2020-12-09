@@ -8,6 +8,12 @@ lt yellow: fee990
 green: 618815 
 cream: f7f4eb*/
 
+.header-text {
+  border-radius: 10px;
+  background-color: #f7f4eb;
+  border: solid thin #618815
+}
+
 .text-block {
   background-color: #fee990;
   opacity: 80%;
