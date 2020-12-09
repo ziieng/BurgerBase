@@ -9,11 +9,8 @@ var burger = {
 
   //insert new
   insert: function (data, cb) {
-    console.log(data);
     let cols = Object.keys(data).toString();
     let vals = Object.values(data);
-    console.log(cols);
-    console.log(vals);
     orm.insertOne("burgers", cols, vals, (response) => cb(response));
   },
 
@@ -22,6 +19,11 @@ var burger = {
     orm.updateOne("burgers", "devoured", "true", id, (response) =>
       cb(response)
     );
+  },
+
+  //delete devoured burger
+  delete: function (id, cb) {
+    orm.deleteOne("burgers", id, (response) => cb(response));
   },
 };
 
