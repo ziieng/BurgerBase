@@ -1,5 +1,4 @@
-# BurgerBase
-https://fathomless-citadel-38635.herokuapp.com/
+# [BurgerBase](https://fathomless-citadel-38635.herokuapp.com/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
